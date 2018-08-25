@@ -10,6 +10,10 @@ Changes
     ------
     * Modifier to super
     * Font to DejaVu
+    * Media control bindings
+    * Brightness bindings (not currently working but I think it's an issue with
+      my brightness script and not the dwm condig
+    * Slock binding
 
 dwm - dynamic window manager
 ============================
