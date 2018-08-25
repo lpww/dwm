@@ -70,6 +70,7 @@ static const char *cmdsounddown[]  = { "amixer", "-q", "sset", "Master", "5%-", 
 static const char *cmdsoundtoggle[]  = { "amixer", "-q", "sset", "Master", "toggle", NULL };
 static const char *cmdbrightnessup[]  = { "brightness", "up", NULL };
 static const char *cmdbrightnessdown[]  = { "brightness", "down", NULL };
+static const char *cmdlock[]  = { "slock", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -98,11 +99,12 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
+	{ MODKEY,                       XK_x,    spawn,            {.v = cmdlock } },
 	{ 0,                            XF86AudioMute,             spawn,          {.v = cmdsoundtoggle } },
 	{ 0,                            XF86AudioRaiseVolume,      spawn,          {.v = cmdsoundup } },
 	{ 0,                            XF86AudioLowerVolume,      spawn,          {.v = cmdsounddown } },
-	{ 0,                            XF86MonBrightnessDown,     spawn,         {.v = cmdbrightnessdown } },
-	{ 0,                            XF86MonBrightnessUp,       spawn,         {.v = cmdbrightnessup } },
+	{ 0,                            XF86MonBrightnessDown,     spawn,          {.v = cmdbrightnessdown } },
+	{ 0,                            XF86MonBrightnessUp,       spawn,          {.v = cmdbrightnessup } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
