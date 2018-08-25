@@ -1,3 +1,15 @@
+Changes
+-------
+
+    Patches
+    -------
+    * bottomstack layout - https://dwm.suckless.org/patches/bottomstack/
+
+    Config
+    ------
+    * Modifier to super
+    * Font to DejaVu
+
 dwm - dynamic window manager
 ============================
 dwm is an extremely fast, small, and dynamic window manager for X.
