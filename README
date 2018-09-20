@@ -5,6 +5,7 @@ Changes
     -------
     * bottomstack layout - https://dwm.suckless.org/patches/bottomstack/
     * attachaside - https://dwm.suckless.org/patches/attachaside/
+    * permtag (with same bar position) - https://dwm.suckless.org/patches/pertag/
 
     Config
     ------
