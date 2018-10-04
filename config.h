@@ -26,12 +26,8 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class          instance    title       tags mask     isfloating   monitor */
-  { "keepassxc",    NULL,       NULL,       1 << 5,       0,           -1 },
-  { "Slack",        NULL,       NULL,       1 << 6,       0,           -1 },
-  { "google-chrome-stable",     NULL,       NULL,         1 << 7,       0,           -1 },
-  { "qutebrowser",  NULL,       NULL,       1 << 8,       0,           -1 },
-	{ "Firefox",      NULL,       NULL,       1 << 8,       0,           -1 },
+	/* class       instance    title       tags mask     isfloating   monitor */
+	{  NULL,       NULL,       NULL,       0,            False,       -1 },
 };
 
 /* layout(s) */
