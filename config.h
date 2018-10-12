@@ -70,6 +70,7 @@ static const char *cmdsoundtoggle[]  = { "amixer", "-q", "sset", "Master", "togg
 static const char *cmdbrightnessup[]  = { "brightness", "up", NULL };
 static const char *cmdbrightnessdown[]  = { "brightness", "down", NULL };
 static const char *cmdlock[]  = { "slock", NULL };
+static const char *cmdscreenshot[]  = { "gnome-screenshot", "-a", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -98,7 +99,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	{ MODKEY,                       XK_x,    spawn,            {.v = cmdlock } },
+	{ MODKEY,                       XK_x,      spawn,          {.v = cmdlock } },
+	{ MODKEY,                       XK_s,      spawn,          {.v = cmdscreenshot } },
 	{ 0,                            XF86AudioMute,             spawn,          {.v = cmdsoundtoggle } },
 	{ 0,                            XF86AudioRaiseVolume,      spawn,          {.v = cmdsoundup } },
 	{ 0,                            XF86AudioLowerVolume,      spawn,          {.v = cmdsounddown } },
