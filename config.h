@@ -1,21 +1,21 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 3;          /* border pixel of windows */
+static const unsigned int borderpx  = 2;          /* border pixel of windows */
 static const unsigned int snap      = 32;         /* snap pixel */
 static const int showbar            = 1;          /* 0 means no bar */
 static const int topbar             = 1;          /* 0 means bottom bar */
 static const char *fonts[]          = { "DejaVu Sans Mono:pixelsize=15:antialias=true:autohint=true;" };
 static const char dmenufont[]       = "DejaVu Sans Mono:pixelsize=15:antialias=true:autohint=true;";
-static const char col_gray1[]       = "#20201f";  /* xresources bg */
-static const char col_gray2[]       = "#222221";  /* xresources blk */
-static const char col_gray3[]       = "#b0b0a2";  /* xresources fg */
-static const char col_gray4[]       = "#3a3a38";  /* xresources bblk */
+static const char col_bg[]          = "#20201f";  /* xresources bg */
+static const char col_fg[]          = "#b0b0a2";  /* xresources fg */
+static const char col_bred[]        = "#996140";  /* xresources bred */
+static const char col_bblk[]        = "#3a3a38";  /* xresources bblk */
 static const char col_cyan[]        = "#566e6b";  /* xresources cyn */
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray1, col_cyan,  col_gray4 },
+	[SchemeNorm] = { col_fg, col_bg, col_bblk },
+	[SchemeSel]  = { col_bg, col_cyan,  col_bred },
 };
 
 /* tagging */
@@ -63,7 +63,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg, "-nf", col_fg, "-sb", col_cyan, "-sf", col_bblk, NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *cmdsoundup[]  = { "amixer", "-q", "sset", "Master", "5%+", NULL };
 static const char *cmdsounddown[]  = { "amixer", "-q", "sset", "Master", "5%-", NULL };
