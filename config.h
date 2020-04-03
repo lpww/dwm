@@ -28,6 +28,7 @@ static const Rule rules[] = {
 	 */
 	/* class       instance    title       tags mask     isfloating   monitor */
 	{  NULL,       NULL,       NULL,       0,            False,       -1 },
+	{ "trayer",    NULL,       NULL,       1 << 8,       False,       -1 },
 };
 
 /* layout(s) */
@@ -70,7 +71,6 @@ static const char *cmdsoundtoggle[]  = { "amixer", "-q", "sset", "Master", "togg
 static const char *cmdbrightnessup[]  = { "brightness", "up", NULL };
 static const char *cmdbrightnessdown[]  = { "brightness", "down", NULL };
 static const char *cmdlock[]  = { "slock", NULL };
-static const char *cmdscreenshot[]  = { "gnome-screenshot", "-a", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -100,7 +100,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ MODKEY,                       XK_x,      spawn,          {.v = cmdlock } },
-	{ MODKEY,                       XK_s,      spawn,          {.v = cmdscreenshot } },
+	{ ControlMask,                  XK_Print,  spawn,          SHCMD("sleep 0.2; gnome-screenshot -a") },
 	{ 0,                            XF86AudioMute,             spawn,          {.v = cmdsoundtoggle } },
 	{ 0,                            XF86AudioRaiseVolume,      spawn,          {.v = cmdsoundup } },
 	{ 0,                            XF86AudioLowerVolume,      spawn,          {.v = cmdsounddown } },
