@@ -15,6 +15,7 @@ Changes
       my brightness script and not the dwm condig
     * Slock binding
     * Ignore size hints (prevents gaps between terminals)
+    * Terminal to Alacritty
 
 dwm - dynamic window manager
 ============================
